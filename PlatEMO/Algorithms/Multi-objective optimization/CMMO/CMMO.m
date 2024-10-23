@@ -8,7 +8,7 @@ classdef CMMO < ALGORITHM
 % optimization, IEEE Transactions on Emerging Topics in Computational
 % Intelligence, 2023, 7(2): 474-486.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -35,7 +35,7 @@ classdef CMMO < ALGORITHM
             epsilon_k = epsilon_0;
             
             %% calculate fitness of populations
-            [Fitness1,D_Dec,D_Pop] = CalFitness(Population1.objs,Population1.decs);
+            [D_Dec,D_Pop,Fitness1] = CalFitness(Population1.objs,Population1.decs);
             [Fitness2,D] = CalFitnessDecEpsilon(Population2.objs,Population2.decs,epsilon_k);
 
             %% Optimization

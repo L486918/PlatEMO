@@ -11,7 +11,7 @@ classdef KTS < ALGORITHM
 % evolutionary multi-objective optimization, IEEE Transactions on
 % Evolutionary Computation, 2023.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -107,7 +107,7 @@ classdef KTS < ALGORITHM
                     % build surrogate models for constraints
                     Dec = [DA.decs;CA.decs;P2.decs];
                     Obj = [DA.cons;CA.cons;P2.cons];
-                    [~,index] = unique( roundn(Dec,-4) ,'rows');
+                    [~,index] = unique( round(Dec,-4) ,'rows');
                     Dec =  Dec(index,:);
                     Obj = Obj(index,:);
                     for i = Problem.M+1: (Problem.M + size(DA.cons,2))

@@ -7,7 +7,7 @@ classdef KP < PROBLEM
 % comparative case study and the strength Pareto approach, IEEE
 % Transactions on Evolutionary Computation, 1999, 3(4): 257-271.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -15,7 +15,7 @@ classdef KP < PROBLEM
 % Computational Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
-    properties(Access = private)
+    properties(SetAccess = private)
         P;	% Profit of each item
         W;  % Weight of each item
     end

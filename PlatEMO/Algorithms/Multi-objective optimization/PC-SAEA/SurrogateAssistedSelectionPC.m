@@ -2,7 +2,7 @@ function Next = SurrogateAssistedSelectionPC(Problem,net,error1,error2,Input,wma
 % Surrogate-assisted selection for selecting promising solutions
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -23,10 +23,9 @@ function Next = SurrogateAssistedSelectionPC(Problem,net,error1,error2,Input,wma
             [~,index] = sort(Label,'descend');
             GoodNext(i,:)  = Next(index(1),:);
             GoodLabel(i,:) = Label(index(1));
-            Input  = Next(index(lnum),:);
+            Input  = Next(index(1:lnum),:);
             Parent = [Input;Pa];
-            Parent = Parent(randperm(size(Parent,1)),:);
-            Next   = OperatorGA(Problem,Parent,{1,15,1,5});
+            Next   = OperatorGA(Problem,Parent(randperm(end),:),{1,15,1,5});
             Label  = net.lastpredict(Next,D,Pa,flag);
             i = i+1;
         end
@@ -42,10 +41,9 @@ function Next = SurrogateAssistedSelectionPC(Problem,net,error1,error2,Input,wma
             [~,index] = sort(Label);
             GoodNext(i,:)  = Next(index(1),:);
             GoodLabel(i,:) = Label(index(1));
-            Input  = Next(index(lnum),:);
+            Input  = Next(index(1:lnum),:);
             Parent = [Input;Pa];
-            Parent = Parent(randperm(size(Parent,1)),:);
-            Next   = OperatorGA(Problem,Parent,{1,15,1,5});
+            Next   = OperatorGA(Problem,Parent(randperm(end),:),{1,15,1,5});
             Label  = net.lastpredict(Next,D,Pa,flag);
             i = i+1;
         end

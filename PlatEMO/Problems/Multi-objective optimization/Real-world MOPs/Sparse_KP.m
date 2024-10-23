@@ -1,5 +1,5 @@
 classdef Sparse_KP < PROBLEM
-% <multi/many> <binary> <large/none>
+% <multi/many> <binary> <large/none> <expensive/none> <sparse/none>
 % The sparse multi-objective knapsack problem
 
 %------------------------------- Reference --------------------------------
@@ -8,7 +8,7 @@ classdef Sparse_KP < PROBLEM
 % optimization via a comprehensive indicator, IEEE Computational
 % Intelligence Magazine, 2022, 17(3): 34-53.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -16,7 +16,7 @@ classdef Sparse_KP < PROBLEM
 % Computational Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
-    properties(Access = private)
+    properties(SetAccess = private)
         P;	% Profit of each item according to each knapsack
         W;  % Weight of each item according to each knapsack
     end

@@ -9,7 +9,7 @@ classdef FDA2 < PROBLEM
 % problems: Test cases, approximations, and applications, IEEE Transactions
 % on Evolutionary Computation, 2004, 8(5): 425-442.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -47,10 +47,10 @@ classdef FDA2 < PROBLEM
         function PopObj = CalObj(obj,PopDec)
             PopObj(:,1) = PopDec(:,1); 
             t = floor(obj.FE/obj.N/obj.taut)/obj.nt;
-            g = 1 + sum(PopDec(:,2:(end-1)/2).^2,2);
+            g = 1 + sum(PopDec(:,2:(end+1)/2).^2,2);
             H = 0.75 + 0.7*sin(0.5.*pi.*t);
             % Note: The original definition of h is questionable
-            h = 1 - (PopObj(:,1)./g).^(H+sum((PopDec(:,(end-1)/2+1:end)-H).^2,2));
+            h = 1 - (PopObj(:,1)./g).^(H+sum((PopDec(:,(end+1)/2+1:end)-H).^2,2));
             PopObj(:,2) = g.*h;
         end
         %% Generate points on the Pareto front

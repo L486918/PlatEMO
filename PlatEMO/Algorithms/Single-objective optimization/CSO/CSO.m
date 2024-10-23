@@ -7,7 +7,7 @@ classdef CSO < ALGORITHM
 % R. Cheng and Y. Jin, A competitive swarm optimizer for large scale
 % optimization, IEEE Transactions on Cybernetics, 2014, 45(2): 191-204.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -37,9 +37,9 @@ classdef CSO < ALGORITHM
                 LoserDec  = Population(loser).decs;
                 WinnerDec = Population(winner).decs;
                 LoserVel  = Population(loser).adds(zeros(size(LoserDec)));
-                R1  = rand(Problem.N/2,Problem.D);
-                R2  = rand(Problem.N/2,Problem.D);
-                R3  = rand(Problem.N/2,Problem.D);
+                R1 = rand(Problem.N/2,Problem.D);
+                R2 = rand(Problem.N/2,Problem.D);
+                R3 = rand(Problem.N/2,Problem.D);
                 LoserVel = R1.*LoserVel + R2.*(WinnerDec-LoserDec) + phi.*R3.*(repmat(mean(Population.decs,1),Problem.N/2,1)-LoserDec);
                 LoserDec = LoserDec + LoserVel;
                 Population(loser) = Problem.Evaluation(LoserDec,LoserVel);

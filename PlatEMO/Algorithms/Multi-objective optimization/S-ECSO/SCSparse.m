@@ -2,7 +2,7 @@ function Population = SCSparse(Problem,Population,L)
 % The sparse operator of S-ECSO
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -22,8 +22,8 @@ function Population = SCSparse(Problem,Population,L)
     end
 
     %% Restrict the range
-    x_maxmin = (Problem.upper-Problem.lower)';
-    for irange = 1:row_x %for every solution
+    x_maxmin = (Problem.upper-Problem.lower);
+    for irange = 1 : row_x
         Upper_flag = Problem.upper<new_x(irange,:);
         Upper_flag_T = sum(Upper_flag);
         if Upper_flag_T > 0
@@ -31,7 +31,7 @@ function Population = SCSparse(Problem,Population,L)
             new_x(irange,Upper_index) = rand(1,size(Upper_index,2)).*x_maxmin(Upper_index);
         end
 
-        Low_flag = Problem.lower > new_x(irange,:);
+        Low_flag   = Problem.lower > new_x(irange,:);
         Low_flag_T = sum(Low_flag);
         if Low_flag_T > 0
             Low_index = find(Low_flag == 1);

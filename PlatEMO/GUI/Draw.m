@@ -21,7 +21,7 @@ function currentAxes = Draw(Data,varargin)
 %       Draw(rand(100,3),{'\it x','\it y','\it z'})
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -40,7 +40,7 @@ function currentAxes = Draw(Data,varargin)
         if size(Data,2) == 1
             Data = [(1:size(Data,1))',Data];
         end
-        set(ax,'FontName','Times New Roman','FontSize',13,'NextPlot','add','Box','on','View',[0 90],'GridLineStyle','none');
+        set(ax,'FontName','Times New Roman','FontSize',13,'NextPlot','add','Box','on','View',[0 90],'YScale','linear');
         if islogical(Data)
             [ax.XLabel.String,ax.YLabel.String,ax.ZLabel.String] = deal('Solution No.','Dimension No.',[]);
         elseif size(Data,2) > 3
@@ -61,6 +61,8 @@ function currentAxes = Draw(Data,varargin)
             elseif size(Data,2) > 3
                 varargin = {'-','Color',[.5 .5 .5],'LineWidth',2};
             end
+        elseif min(Data(:,2)) > 0 && max(Data(:,2)) > 10*min(Data(:,2))
+            set(ax,'YScale','log');
         end
         if islogical(Data)
             C = zeros(size(Data)) + 0.6;

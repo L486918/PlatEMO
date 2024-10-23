@@ -3,7 +3,7 @@ function [Input,Output,Pa,Pmid] = CalFitnessPC(PopObj,PopDec,rate)
 % convergence and the diversity 
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -15,7 +15,6 @@ function [Input,Output,Pa,Pmid] = CalFitnessPC(PopObj,PopDec,rate)
     Zmin   = min(PopObj,[],1);
     Zmax   = max(PopObj);            
     PopObj = (PopObj-repmat(Zmin,N,1))./(repmat(Zmax,N,1)-repmat(Zmin,N,1));
-    Objs   = PopObj;
     SDE    = zeros(N,1);
     for i = 1 : N
         SPopuObj = PopObj;
@@ -27,7 +26,7 @@ function [Input,Output,Pa,Pmid] = CalFitnessPC(PopObj,PopDec,rate)
         Dk = Distance(index(floor(sqrt(N))+1)); % Dk denotes the distance of solution i and its floor(sqrt(N)+1)-th nearest neighbour
         SDE(i)=2./(Dk+2);
     end
-    PopObj = SDE;
+    Objs = SDE;
     
    %% Detect the dominance relation between each two solutions
     Dominate = false(N);
@@ -55,14 +54,14 @@ function [Input,Output,Pa,Pmid] = CalFitnessPC(PopObj,PopDec,rate)
     Distance = pdist2(real(Objs),real(Objs),'cosine');
     Distance(logical(eye(length(Distance)))) = inf;
     Distance = sort(Distance,2);
-    D = 2./(Distance(:,floor(sqrt(N)))+2);
+    D = 1./(Distance(:,floor(sqrt(N)))+2);
 
    %% Calculate the fitnesses
     Rmin = min(R);
     Rmax = max(R);
     R = (R-repmat(Rmin,1,N))./(repmat(Rmax,1,N)-repmat(Rmin,1,N));
     R = R';
-    Fitness =  rate*R + (1-rate)*D*2;
+    Fitness =  rate*R + (1-rate)*D;
 
     [~, index] = sort(Fitness);
     Input  = [PopDec(index(1:ceil(N/4)),:);PopDec(index(end-(ceil(N/2)-ceil(N/4))+1:end),:)];

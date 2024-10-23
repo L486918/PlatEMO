@@ -7,7 +7,7 @@ classdef DWU < ALGORITHM
 % decision space, Proceedings of the IEEE Latin American Conference on
 % Computational Intelligence, 2019.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -21,13 +21,12 @@ classdef DWU < ALGORITHM
         function main(Algorithm,Problem)
             %% Generate random population
             Population = Problem.Initialization();
-            [Population,FrontNo] = EnvironmentalSelection(Population,Problem.N);
 
             %% Optimization
             while Algorithm.NotTerminated(Population)
-                MatingPool = TournamentSelection(2,Problem.N,FrontNo);
+                MatingPool = TournamentSelection(2,Problem.N,sum(max(0,Population.cons),2));
                 Offspring  = OperatorGA(Problem,Population(MatingPool));
-                [Population,FrontNo,] = EnvironmentalSelection([Population,Offspring],Problem.N);
+                Population = EnvironmentalSelection([Population,Offspring],Problem.N);
             end
         end
     end

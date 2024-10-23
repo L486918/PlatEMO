@@ -9,7 +9,7 @@ classdef Sparse_CD < PROBLEM
 % unsupervised neural networks, IEEE Transactions on Cybernetics, 2021,
 % 51(6): 3115-3128.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB Platform
@@ -25,7 +25,7 @@ classdef Sparse_CD < PROBLEM
 % 3     Polbook     105     441
 % 4     Football    115     613
 
-    properties(Access = private)
+    properties(SetAccess = private)
         Adj;    % Adjacency matrix of the network
         ACT;    % Similarity between nodes
         G;      % The graph object

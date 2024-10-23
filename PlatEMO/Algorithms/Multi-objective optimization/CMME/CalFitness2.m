@@ -2,7 +2,7 @@ function Fitness = CalFitness2(PopObj,PopCon)
 % Calculate the fitness of each solution for mating selection
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -42,7 +42,7 @@ function Fitness = CalFitness2(PopObj,PopCon)
         if CV(i)==0||R(i)==0
             Fitness(i)=0;
         else
-            Fitness(i)=CalFitness(PopObj(i,:),PopCon(i,:));
+            Fitness(i)=CalFitness1(PopObj(i,:),PopCon(i,:));
         end
     end
 end

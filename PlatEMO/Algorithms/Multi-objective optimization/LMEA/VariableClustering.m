@@ -2,7 +2,7 @@ function [PV,DV] = VariableClustering(Problem,Population,nSel,nPer)
 % Detect the kind of each decision variable
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2023 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -45,8 +45,8 @@ function [PV,DV] = VariableClustering(Problem,Population,nSel,nPer)
             RMSE(i,j) = sqrt(sum(error.^2));
             % Calculate the angle between the line and the hyperplane
             normal     = ones(1,size(Vector,2));
-            sine       = abs(sum(Vector.*normal,2))./norm(Vector)./norm(normal);
-            Angle(i,j) = real(asin(sine)/pi*180);
+            cosine     = abs(sum(Vector.*normal,2))./norm(Vector)./norm(normal);
+            Angle(i,j) = real(acos(cosine)/pi*180);
         end
     end
     
@@ -54,7 +54,7 @@ function [PV,DV] = VariableClustering(Problem,Population,nSel,nPer)
     VariableKind = (mean(RMSE,2)<1e-2)';
     result       = kmeans(Angle,2)';
     if any(result(VariableKind)==1) && any(result(VariableKind)==2)
-        if mean(mean(Angle(result==1&VariableKind,:))) > mean(mean(Angle(result==2&VariableKind,:)))
+        if mean(mean(Angle(result==1&VariableKind,:))) < mean(mean(Angle(result==2&VariableKind,:)))
             VariableKind = VariableKind & result==1;
         else
             VariableKind = VariableKind & result==2;
