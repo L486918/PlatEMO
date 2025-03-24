@@ -1,13 +1,13 @@
 classdef SparseEA < ALGORITHM
-% <multi> <real/integer/binary> <large/none> <constrained/none> <sparse>
+% <2020> <multi> <real/integer/binary> <large/none> <constrained/none> <sparse>
 % Evolutionary algorithm for sparse multi-objective optimization problems
 
 %------------------------------- Reference --------------------------------
-% Y. Tian, X. Zhang, C. Wang, and Y. Jin, An evolutionary algorithm for
-% large-scale sparse multi-objective optimization problems, IEEE
+% Y. Tian, X. Zhang, C. Wang, and Y. Jin. An evolutionary algorithm for
+% large-scale sparse multi-objective optimization problems. IEEE
 % Transactions on Evolutionary Computation, 2020, 24(2): 380-393.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

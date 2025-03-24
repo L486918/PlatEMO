@@ -1,15 +1,15 @@
 classdef FDA2 < PROBLEM
-% <multi> <real> <large/none> <dynamic>
+% <2004> <multi> <real> <large/none> <dynamic>
 % Benchmark dynamic MOP proposed by Farina, Deb, and Amato
 % taut --- 10 --- Number of generations for static optimization
 % nt   --- 10 --- Number of distinct steps
 
 %------------------------------- Reference --------------------------------
-% M. Farina, K. Deb, and P. Amato, Dynamic multiobjective optimization
-% problems: Test cases, approximations, and applications, IEEE Transactions
+% M. Farina, K. Deb, and P. Amato. Dynamic multiobjective optimization
+% problems: Test cases, approximations, and applications. IEEE Transactions
 % on Evolutionary Computation, 2004, 8(5): 425-442.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

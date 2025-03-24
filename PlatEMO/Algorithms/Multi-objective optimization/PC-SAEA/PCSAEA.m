@@ -1,16 +1,16 @@
 classdef PCSAEA < ALGORITHM
-% <multi/many> <real> <expensive>
+% <2023> <multi/many> <real> <expensive>
 % Pairwise comparison based surrogate-assisted evolutionary algorithm
 % delta ---  0.8 --- Threshold of reliability measurement
 % gmax  --- 3000 --- Number of solutions evaluated by surrogate model
 
 %------------------------------- Reference --------------------------------
-% Y. Tian, J. Hu, C. He, H. Ma, L. Zhang, and X. Zhang, A pairwise
+% Y. Tian, J. Hu, C. He, H. Ma, L. Zhang, and X. Zhang. A pairwise
 % comparison based surrogate-assisted evolutionary algorithm for expensive
-% multi-objective optimization, Swarm and Evolutionary Computation, 2023,
+% multi-objective optimization. Swarm and Evolutionary Computation, 2023,
 % 80: 101323.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

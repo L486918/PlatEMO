@@ -1,15 +1,15 @@
 classdef MOEADAWA < ALGORITHM
-% <multi/many> <real/integer/label/binary/permutation>
+% <2014> <multi/many> <real/integer/label/binary/permutation>
 % MOEA/D with adaptive weight adjustment
 % rate_update_weight --- 0.05 --- Ratio of updated weight vectors
 % rate_evol          ---  0.8 --- Ratio of iterations to evolve with only MOEA/D
 % wag                ---  100 --- Iteration interval of utilizing AWA
 
 %------------------------------- Reference --------------------------------
-% Y. Qi, X. Ma, F. Liu, L. Jiao, J. Sun, and J. Wu, MOEA/D with adaptive
-% weight adjustment, Evolutionary Computation, 2014, 22(2): 231-264.
+% Y. Qi, X. Ma, F. Liu, L. Jiao, J. Sun, and J. Wu. MOEA/D with adaptive
+% weight adjustment. Evolutionary Computation, 2014, 22(2): 231-264.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

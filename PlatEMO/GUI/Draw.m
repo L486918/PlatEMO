@@ -21,7 +21,7 @@ function currentAxes = Draw(Data,varargin)
 %       Draw(rand(100,3),{'\it x','\it y','\it z'})
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -61,7 +61,7 @@ function currentAxes = Draw(Data,varargin)
             elseif size(Data,2) > 3
                 varargin = {'-','Color',[.5 .5 .5],'LineWidth',2};
             end
-        elseif min(Data(:,2)) > 0 && max(Data(:,2)) > 10*min(Data(:,2))
+        elseif min(Data(:,2)) > 0 && max(Data(:,2)) > 100*min(Data(:,2))
             set(ax,'YScale','log');
         end
         if islogical(Data)

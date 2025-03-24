@@ -1,11 +1,11 @@
 classdef POCEA < ALGORITHM
-% <multi> <real/integer> <large/none> <constrained>
+% <2021> <multi> <real/integer> <large/none> <constrained>
 % Paired offspring generation based constrained evolutionary algorithm
 
 %------------------------------- Reference --------------------------------
-% C. He, R. Cheng, Y. Tian, X. Zhang, K. C. Tan, and Y. Jin, Paired
+% C. He, R. Cheng, Y. Tian, X. Zhang, K. C. Tan, and Y. Jin. Paired
 % offspring generation for constrained large-scale multiobjective
-% optimization, IEEE Transactions on Evolutionary Computation, 2021, 25(3):
+% optimization. IEEE Transactions on Evolutionary Computation, 2021, 25(3):
 % 448-462.
 %--------------------------------------------------------------------------
 

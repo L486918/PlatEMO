@@ -1,16 +1,16 @@
 classdef rNSGAII < ALGORITHM
-% <multi> <real/integer/label/binary/permutation>
+% <2010> <multi> <real/integer/label/binary/permutation>
 % r-dominance based NSGA-II
 % Points ---     --- Set of preferred points
 % W      ---     --- Set of weight vectors for preferred points
 % delta  --- 0.1 --- Non-r-dominance threshold
 
 %------------------------------- Reference --------------------------------
-% L. B. Said, S. Bechikh, and K. Ghedira, The r-dominance: A new dominance
-% relation for interactive evolutionary multicriteria decision making, IEEE
+% L. B. Said, S. Bechikh, and K. Ghedira. The r-dominance: A new dominance
+% relation for interactive evolutionary multicriteria decision making. IEEE
 % Transactions on Evolutionary Computation, 2010, 14(5): 801-818.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

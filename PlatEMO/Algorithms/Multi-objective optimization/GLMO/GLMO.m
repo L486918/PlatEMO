@@ -1,13 +1,13 @@
 classdef GLMO < ALGORITHM
-% <multi> <real/integer> <large/none>
+% <2019> <multi> <real/integer> <large/none>
 % Grouped and linked mutation operator algorithm
 % optimiser      --- 3 --- The optimisation method. 1 = SMPSO, 2 = NSGA-II, 3 = NSGA-III. Default = NSGA-III
 % typeOfGroups   --- 2 --- Grouping method, 1 = linear, 2 = ordered, 3 = random. Default = ordered
 % numberOfGroups --- 4 --- The number of varibale Groups. Default = 4  
 
 %------------------------------- Reference --------------------------------
-% H. Zille, Large-scale Multi-objective Optimisation: New Approaches and a
-% Classification of the State-of-the-Art, PhD Thesis, Otto von Guericke
+% H. Zille. Large-scale Multi-objective Optimisation: New Approaches and a
+% Classification of the State-of-the-Art. PhD Thesis, Otto von Guericke
 % University Magdeburg, 2019.
 % ----------------------------------------------------------------------- 
 %  Copyright (C) 2020 Heiner Zille

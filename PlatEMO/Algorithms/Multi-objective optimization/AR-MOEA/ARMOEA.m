@@ -1,14 +1,14 @@
 classdef ARMOEA < ALGORITHM
-% <multi/many> <real/integer/label/binary/permutation> <constrained/none>
+% <2018> <multi/many> <real/integer/label/binary/permutation> <constrained/none>
 % Adaptive reference points based multi-objective evolutionary algorithm
 
 %------------------------------- Reference --------------------------------
-% Y. Tian, R. Cheng, X. Zhang, and Y. Jin, An indicator-based
+% Y. Tian, R. Cheng, X. Zhang, and Y. Jin. An indicator-based
 % multiobjective evolutionary algorithm with reference point adaptation for
-% better versatility, IEEE Transactions on Evolutionary Computation, 2018,
+% better versatility. IEEE Transactions on Evolutionary Computation, 2018,
 % 22(4): 609-622.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

@@ -1,15 +1,15 @@
 classdef MOCGDE < ALGORITHM
-% <multi/many> <real> <large/none> <constrained/none>
+% <2022> <multi/many> <real> <large/none> <constrained/none>
 % Multi-objective conjugate gradient and differential evolution algorithm
 % NP --- 10 --- Small population size
 
 %------------------------------- Reference --------------------------------
-% Y. Tian, H. Chen, H. Ma, X. Zhang, K. C. Tan, and Y. Jin, Integrating
+% Y. Tian, H. Chen, H. Ma, X. Zhang, K. C. Tan, and Y. Jin. Integrating
 % conjugate gradients into evolutionary algorithms for large-scale
-% continuous multi-objective optimization, IEEE/CAA Journal of Automatica
+% continuous multi-objective optimization. IEEE/CAA Journal of Automatica
 % Sinica, 2022, 9(10): 1801-1817.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB Platform

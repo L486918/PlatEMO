@@ -1,16 +1,16 @@
 classdef SMEA < ALGORITHM
-% <multi> <real/integer>
+% <2016> <multi> <real/integer>
 % Self-organizing multiobjective evolutionary algorithm
 % D    ---     --- Number of neurons in each dimension of the latent space
 % tau0 --- 0.7 --- Initial learning rate
 % H    ---   5 --- Size of neighborhood mating pools
 
 %------------------------------- Reference --------------------------------
-% H. Zhang, A. Zhou, S. Song, Q. Zhang, X. Gao, and J. Zhang, A self-
-% organizing multiobjective evolutionary algorithm, IEEE Transactions on
+% H. Zhang, A. Zhou, S. Song, Q. Zhang, X. Gao, and J. Zhang. A self-
+% organizing multiobjective evolutionary algorithm. IEEE Transactions on
 % Evolutionary Computation, 2016, 20(5): 792-806.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

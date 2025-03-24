@@ -1,15 +1,15 @@
 classdef LMPFE < ALGORITHM
-% <multi/many> <real/integer/label/binary/permutation>
+% <2023> <multi/many> <real/integer/label/binary/permutation>
 % Evolutionary algorithm with local model based Pareto front estimation
 % fPFE  --- 0.1 --- Frequency of employing generic front modeling
 % K     --- 5  --- Number of subregions
 
 %------------------------------- Reference --------------------------------
-% Y. Tian, L. Si, X. Zhang, K. C. Tan, and Y. Jin, Local model based Pareto
-% front estimation for multi-objective optimization, IEEE Transactions on
+% Y. Tian, L. Si, X. Zhang, K. C. Tan, and Y. Jin. Local model based Pareto
+% front estimation for multi-objective optimization. IEEE Transactions on
 % Systems, Man, and Cybernetics: Systems, 2023, 53(1): 623-634.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

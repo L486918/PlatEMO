@@ -1,17 +1,17 @@
 classdef MCEAD < ALGORITHM
-% <multi/many> <real/integer> <expensive>
+% <2022> <multi/many> <real/integer> <expensive>
 % Multiple classifiers-assisted evolutionary algorithm based on decomposition
 % delta  --- 0.9 --- The probability of choosing parents locally
 % nr     ---   2 --- Maximum number of solutions replaced by each offspring
 % Rmax   ---  10 --- Maximum repeat time of offspring generation
 
 %------------------------------- Reference --------------------------------
-% T. Sonoda and M. Nakata, Multiple classifiers-assisted evolutionary
+% T. Sonoda and M. Nakata. Multiple classifiers-assisted evolutionary
 % algorithm based on decomposition for high-dimensional multi-objective
-% problems, IEEE Transactions on Evolutionary Computation, 2022, 26(6):
+% problems. IEEE Transactions on Evolutionary Computation, 2022, 26(6):
 % 1581-1595.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

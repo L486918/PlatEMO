@@ -1,5 +1,5 @@
 classdef GA < ALGORITHM
-% <single> <real/integer/label/binary/permutation> <large/none> <constrained/none>
+% <1992> <single> <real/integer/label/binary/permutation> <large/none> <constrained/none>
 % Genetic algorithm
 % proC ---  1 --- Probability of crossover
 % disC --- 20 --- Distribution index of simulated binary crossover
@@ -7,10 +7,10 @@ classdef GA < ALGORITHM
 % disM --- 20 --- Distribution index of polynomial mutation
 
 %------------------------------- Reference --------------------------------
-% J. H. Holland, Adaptation in Natural and Artificial Systems, MIT Press,
+% J. H. Holland. Adaptation in Natural and Artificial Systems. MIT Press,
 % 1992.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

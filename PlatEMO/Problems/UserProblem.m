@@ -18,7 +18,7 @@ classdef UserProblem < PROBLEM
 %   once        <logical>           whether the inputs of evalFcn, decFcn, objFcn, conFcn can be multiple solutions
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -77,10 +77,10 @@ classdef UserProblem < PROBLEM
         function Population = Evaluation(obj,varargin)
             if ~isempty(obj.evalFcn)
                 if obj.once
-                    [PopDec,PopObj,PopCon] = CallFcn(obj.evalFcn,varargin{1},obj.data,'evaluation function',[size(varargin{1},1) obj.D],[size(varargin{1},1) 1],[size(varargin{1},1) 1]);
+                    [PopDec,PopObj,PopCon] = CallFcn(obj.evalFcn,varargin{1},obj.data,'evaluation function',[size(varargin{1},1) obj.D]);
                 else
                     for i = 1 : size(varargin{1},1)
-                        [PopDec(i,:),PopObj(i,:),PopCon(i,:)] = CallFcn(obj.evalFcn,varargin{1}(i,:),obj.data,'evaluation function',[1 obj.D],[1 1],[1 1]);
+                        [PopDec(i,:),PopObj(i,:),PopCon(i,:)] = CallFcn(obj.evalFcn,varargin{1}(i,:),obj.data,'evaluation function',[1 obj.D]);
                     end
                 end
                 Population = SOLUTION(PopDec,PopObj,PopCon,varargin{2:end});

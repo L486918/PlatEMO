@@ -1,15 +1,15 @@
 classdef MOBCA < ALGORITHM
-% <multi> <real/integer>
+% <2024> <multi> <real/integer>
 % Multi-objective besiege and conquer algorithm
 % BCB       --- 0.2 --- Set BCB
 % nSoldiers ---   3 --- Number of soldiers for each armies
 % div       ---  10 --- Division number of grids
 
 %------------------------------- Reference --------------------------------
-% J. Jiang, J. Wu, J. Luo, X. Yang, and Z. Huang, MOBCA: multi-objective
+% J. Jiang, J. Wu, J. Luo, X. Yang, and Z. Huang. MOBCA: multi-objective
 % besiege and conquer algorithm. Biomimetics, 2024, 9: 316.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

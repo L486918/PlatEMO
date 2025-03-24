@@ -1,16 +1,16 @@
 classdef MOEADMRDL < ALGORITHM
-% <multi> <real/integer>
+% <2015> <multi> <real/integer>
 % MOEA/D with maximum relative diversity loss
 % gamma --- 20 --- Maximum allowable maximum relative diversity loss
 % nmov  --- 10 --- Size of moving average
 
 %------------------------------- Reference --------------------------------
-% S. B. Gee, K. C. Tan, V. A. Shim, and N. R. Pal, Online diversity
+% S. B. Gee, K. C. Tan, V. A. Shim, and N. R. Pal. Online diversity
 % assessment in evolutionary multiobjective optimization: A geometrical
-% perspective, IEEE Transactions on Evolutionary Computation, 2015, 19(4):
+% perspective. IEEE Transactions on Evolutionary Computation, 2015, 19(4):
 % 542-559.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

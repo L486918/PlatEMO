@@ -1,16 +1,16 @@
 classdef CSEA < ALGORITHM
-% <multi/many> <real/integer> <expensive>
+% <2019> <multi/many> <real/integer> <expensive>
 % Classification based surrogate-assisted evolutionary algorithm
 % k    ---    6 --- Number of reference solutions
 % gmax --- 3000 --- Number of solutions evaluated by surrogate model
 
 %------------------------------- Reference --------------------------------
-% L. Pan, C. He, Y. Tian, H. Wang, X. Zhang, and Y. Jin, A classification
+% L. Pan, C. He, Y. Tian, H. Wang, X. Zhang, and Y. Jin. A classification
 % based surrogate-assisted evolutionary algorithm for expensive
-% many-objective optimization, IEEE Transactions on Evolutionary
+% many-objective optimization. IEEE Transactions on Evolutionary
 % Computation, 2019, 23(1): 74-88.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

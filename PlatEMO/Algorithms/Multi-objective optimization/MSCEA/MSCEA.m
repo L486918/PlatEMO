@@ -1,14 +1,14 @@
 classdef MSCEA < ALGORITHM
-% <multi> <real/integer/label/binary/permutation> <constrained>
+% <2023> <multi> <real/integer/label/binary/permutation> <constrained>
 % Multi-stage constrained multi-objective evolutionary algorithm
 % cp --- 5 --- Decrease trend of the dynamic constraint boundary
 
 %------------------------------- Reference --------------------------------
-% Y. Zhang, Y. Tian, H. Jiang, X. Zhang, and Y. Jin, Design and analysis of
+% Y. Zhang, Y. Tian, H. Jiang, X. Zhang, and Y. Jin. Design and analysis of
 % helper-problem-assisted evolutionary algorithm for constrained 
-% multiobjective optimization, Information Sciences, 2023, 648: 119547.
+% multiobjective optimization. Information Sciences, 2023, 648: 119547.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

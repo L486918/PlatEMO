@@ -1,16 +1,16 @@
 classdef MOEADPFE < ALGORITHM
-% <multi/many> <real/integer/label/binary/permutation>
+% <2021> <multi/many> <real/integer/label/binary/permutation>
 % MOEA/D with Pareto front estimation
 % phi   --- 0.1 --- The frequency of employing weight update
 % alpha --- 0.1 --- Alpha radius or threshold parameter
 
 %------------------------------- Reference --------------------------------
-% T. Takagi, K. Takadama, and H. Sato, A multi-objective evolutionary
+% T. Takagi, K. Takadama, and H. Sato. A multi-objective evolutionary
 % algorithm using weight vector arrangement based on Pareto front
-% estimation, Transaction of the Japanese Society for Evolutionary
+% estimation. Transaction of the Japanese Society for Evolutionary
 % Computation (Japanese), 2021, 12(2): 45-60.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

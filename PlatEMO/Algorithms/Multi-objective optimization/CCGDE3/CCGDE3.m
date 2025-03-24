@@ -1,13 +1,13 @@
 classdef CCGDE3 < ALGORITHM
-% <multi> <real/integer> <large/none>
+% <2013> <multi> <real/integer> <large/none>
 % Cooperative coevolution generalized differential evolution 3
 
 %------------------------------- Reference --------------------------------
-% L. M. Antonio and C. A. Coello Coello, Use of cooperative coevolution for
-% solving large scale multiobjective optimization problems, Proceedings of
+% L. M. Antonio and C. A. Coello Coello. Use of cooperative coevolution for
+% solving large scale multiobjective optimization problems. Proceedings of
 % the IEEE Congress on Evolutionary Computation, 2013, 2758-2765.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

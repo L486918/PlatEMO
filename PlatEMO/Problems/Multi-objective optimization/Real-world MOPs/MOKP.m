@@ -1,13 +1,13 @@
 classdef MOKP < PROBLEM
-% <multi/many> <binary> <large/none> <constrained>
+% <1999> <multi/many> <binary> <large/none> <constrained>
 % The multi-objective knapsack problem
 
 %------------------------------- Reference --------------------------------
-% E. Zitzler and L. Thiele, Multiobjective evolutionary algorithms: A
-% comparative case study and the strength Pareto approach, IEEE
+% E. Zitzler and L. Thiele. Multiobjective evolutionary algorithms: A
+% comparative case study and the strength Pareto approach. IEEE
 % Transactions on Evolutionary Computation, 1999, 3(4): 257-271.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

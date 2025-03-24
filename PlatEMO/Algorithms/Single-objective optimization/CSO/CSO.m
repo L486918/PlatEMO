@@ -1,13 +1,13 @@
 classdef CSO < ALGORITHM
-% <single> <real/integer> <large/none> <constrained/none>
+% <2014> <single> <real/integer> <large/none> <constrained/none>
 % Competitive swarm optimizer
 % phi --- 0.1 --- Social factor
 
 %------------------------------- Reference --------------------------------
-% R. Cheng and Y. Jin, A competitive swarm optimizer for large scale
-% optimization, IEEE Transactions on Cybernetics, 2014, 45(2): 191-204.
+% R. Cheng and Y. Jin. A competitive swarm optimizer for large scale
+% optimization. IEEE Transactions on Cybernetics, 2014, 45(2): 191-204.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

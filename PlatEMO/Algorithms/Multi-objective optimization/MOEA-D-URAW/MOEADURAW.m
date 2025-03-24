@@ -1,16 +1,16 @@
 classdef MOEADURAW < ALGORITHM
-% <multi/many> <real/integer/label/binary/permutation>
+% <2019> <multi/many> <real/integer/label/binary/permutation>
 % MOEA/D with uniform randomly adaptive weights
 % delta --- 0.9 --- The probability of choosing parents locally
 % nr    ---   2 --- Maximum number of solutions replaced by each offspring
 
 %------------------------------- Reference --------------------------------
-% L. R. C. Farias and A. F. R. Araujo, Many-objective evolutionary
-% algorithm based on decomposition with random and adaptive weights. In
+% L. R. C. Farias and A. F. R. Araujo. Many-objective evolutionary
+% algorithm based on decomposition with random and adaptive weights.
 % Proceedings of the IEEE International Conference on Systems, Mans and
 % Cybernetics, 2019.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

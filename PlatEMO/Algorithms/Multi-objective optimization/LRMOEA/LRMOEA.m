@@ -1,13 +1,13 @@
 classdef LRMOEA < ALGORITHM
-% <multi> <real/integer/binary> <large/none> <constrained/none> <sparse> <robust>
+% <2024> <multi> <real/integer/binary> <large/none> <constrained/none> <sparse> <robust>
 % Large-scale robust multi-objective evolutionary algorithm
 
 %------------------------------- Reference --------------------------------
-% S. Shao, Y. Tian, L. Zhang, K. C. Tan, and X. Zhang, An evolutionary
+% S. Shao, Y. Tian, L. Zhang, K. C. Tan, and X. Zhang. An evolutionary
 % algorithm for solving large-scale robust multi-objective optimization
-% problems, IEEE Transactions on Evolutionary Computation, 2024.
+% problems. IEEE Transactions on Evolutionary Computation, 2024.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

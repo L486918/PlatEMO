@@ -1,5 +1,5 @@
 classdef MPAES < ALGORITHM
-% <multi> <real/integer>
+% <2000> <multi> <real/integer>
 % Memetic algorithm with Pareto archived evolution strategy
 % l_fails   ---  5 --- Maximum number of consecutive failing local moves
 % l_opt     --- 10 --- Maximum number of local moves
@@ -7,11 +7,11 @@ classdef MPAES < ALGORITHM
 % div       --- 10 --- The number of divisions in each objective
 
 %------------------------------- Reference --------------------------------
-% J. D. Knowles and D. W. Corne, M-PAES: A memetic algorithm for
-% multiobjective optimization, Proceedings of the IEEE Congress on
+% J. D. Knowles and D. W. Corne. M-PAES: A memetic algorithm for
+% multiobjective optimization. Proceedings of the IEEE Congress on
 % Evolutionary Computation, 2000, 325-332.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

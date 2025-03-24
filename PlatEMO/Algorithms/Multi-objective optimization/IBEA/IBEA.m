@@ -1,14 +1,14 @@
 classdef IBEA < ALGORITHM
-% <multi/many> <real/integer/label/binary/permutation>
+% <2004> <multi/many> <real/integer/label/binary/permutation>
 % Indicator-based evolutionary algorithm
 % kappa --- 0.05 --- Fitness scaling factor
 
 %------------------------------- Reference --------------------------------
-% E. Zitzler and S. Kunzli, Indicator-based selection in multiobjective
-% search, Proceedings of the International Conference on Parallel Problem
+% E. Zitzler and S. Kunzli. Indicator-based selection in multiobjective
+% search. Proceedings of the International Conference on Parallel Problem
 % Solving from Nature, 2004, 832-842.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

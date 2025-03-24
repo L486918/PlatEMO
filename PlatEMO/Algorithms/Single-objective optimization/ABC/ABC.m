@@ -1,13 +1,13 @@
 classdef ABC < ALGORITHM
-% <single> <real/integer> <large/none> <constrained/none>
+% <2005> <single> <real/integer> <large/none> <constrained/none>
 % Artificial bee colony algorithm
 % limit --- 20 --- The number of trials for releasing a food source
 
 %------------------------------- Reference --------------------------------
-% D. Karaboga, An idea based on honey bee swarm for numerical optimization,
+% D. Karaboga. An idea based on honey bee swarm for numerical optimization.
 % Erciyes University, Tech. Rep. tr06, 2005.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

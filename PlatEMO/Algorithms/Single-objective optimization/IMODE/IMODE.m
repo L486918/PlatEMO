@@ -1,16 +1,16 @@
 classdef IMODE < ALGORITHM
-% <single> <real/integer> <large/none> <constrained/none>
+% <2020> <single> <real/integer> <large/none> <constrained/none>
 % Improved multi-operator differential evolution
 % minN  ---   4 --- Minimum population size
 % aRate --- 2.6 --- Ratio of archive size to population size
 
 %------------------------------- Reference --------------------------------
-% K. M. Sallam, S. M. Elsayed, R. K. Chakrabortty, and M. J. Ryan, Improved
+% K. M. Sallam, S. M. Elsayed, R. K. Chakrabortty, and M. J. Ryan. Improved
 % multi-operator differential evolution algorithm for solving unconstrained
-% problems, Proceedings of the IEEE Congress on Evolutionary Computation,
+% problems. Proceedings of the IEEE Congress on Evolutionary Computation,
 % 2020.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

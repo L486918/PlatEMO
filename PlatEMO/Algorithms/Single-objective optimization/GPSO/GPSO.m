@@ -1,13 +1,13 @@
 classdef GPSO < ALGORITHM
-% <single> <real> <large/none> <constrained/none>
+% <2012> <single> <real> <large/none> <constrained/none>
 % Gradient based particle swarm optimization algorithm
 
 %------------------------------- Reference --------------------------------
-% M. M. Noel, A new gradient based particle swarm optimization algorithm
-% for accurate computation of global minimum, Applied Soft Computing, 2012,
+% M. M. Noel. A new gradient based particle swarm optimization algorithm
+% for accurate computation of global minimum. Applied Soft Computing, 2012,
 % 12: 353-359.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB Platform

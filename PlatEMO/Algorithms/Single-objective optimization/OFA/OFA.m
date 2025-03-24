@@ -1,12 +1,12 @@
 classdef OFA < ALGORITHM
-% <single> <real/integer> <large/none> <constrained/none>
+% <2017> <single> <real/integer> <large/none> <constrained/none>
 % Optimal foraging algorithm
 
 %------------------------------- Reference --------------------------------
-% G. Zhu and W. Zhang, Optimal foraging algorithm for global optimization,
+% G. Zhu and W. Zhang. Optimal foraging algorithm for global optimization.
 % Applied Soft Computing, 2017, 51: 294-313.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

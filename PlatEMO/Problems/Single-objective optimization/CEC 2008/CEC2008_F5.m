@@ -1,14 +1,14 @@
 classdef CEC2008_F5 < PROBLEM
-% <single> <real> <large/none> <expensive/none>
+% <2007> <single> <real> <large/none> <expensive/none>
 % Shifted Griewank's function
 
 %------------------------------- Reference --------------------------------
 % K. Tang, X. Yao, P. N. Suganthan, C. MacNish, Y.-P. Chen, C.-M. Chen, and
-% Z. Yang, Benchmark functions for the CEC'2008 special session and
-% competition on large scale global optimization, Nature Inspired
+% Z. Yang. Benchmark functions for the CEC'2008 special session and
+% competition on large scale global optimization. Nature Inspired
 % Computation and Applications Laboratory, USTC, China, 2007.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

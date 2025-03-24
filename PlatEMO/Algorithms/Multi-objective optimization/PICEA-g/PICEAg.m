@@ -1,14 +1,14 @@
 classdef PICEAg < ALGORITHM
-% <multi/many> <real/integer/label/binary/permutation>
+% <2013> <multi/many> <real/integer/label/binary/permutation>
 % Preference-inspired coevolutionary algorithm with goals
 % NGoal --- --- Number of goals
 
 %------------------------------- Reference --------------------------------
-% R. Wang, R. C. Purshouse, and P. J. Fleming, Preference-inspired
-% coevolutionary algorithms for many-objective optimization, IEEE
+% R. Wang, R. C. Purshouse, and P. J. Fleming. Preference-inspired
+% coevolutionary algorithms for many-objective optimization. IEEE
 % Transactions on Evolutionary Computation, 2013, 17(4): 474-494.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

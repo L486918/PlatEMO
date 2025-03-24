@@ -1,11 +1,11 @@
 classdef DEAGNG < ALGORITHM
-% <multi/many> <real/integer/label/binary/permutation>
+% <2020> <multi/many> <real/integer/label/binary/permutation>
 % Decomposition based evolutionary algorithm guided by growing neural gas
 % aph ---   0.1 --- Parameter alpha
 % eps --- 0.314 --- Parameter epsilon
 
 %------------------------------- Reference --------------------------------
-% Y. Liu, H. Ishibuchi, N. Masuyama, and Y. Nojima, Adapting reference
+% Y. Liu, H. Ishibuchi, N. Masuyama, and Y. Nojima. Adapting reference
 % vectors and scalarizing functions by growing neural gas to handle
 % irregular Pareto fronts. IEEE Transactions on Evolutionary Computation,
 % 2020, 24(3): 439-453.

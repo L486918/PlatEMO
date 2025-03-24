@@ -1,5 +1,5 @@
 classdef Sparse_SR < PROBLEM
-% <multi> <real> <large/none> <expensive/none> <sparse/none>
+% <2021> <multi> <real> <large/none> <expensive/none> <sparse/none>
 % The sparse signal reconstruction problem
 % lenSig   --- 1024 --- Length of signal 
 % lenObs   ---  480 --- Number of observations
@@ -7,12 +7,12 @@ classdef Sparse_SR < PROBLEM
 % sigma    ---    0 --- Noise level
 
 %------------------------------- Reference --------------------------------
-% Y. Tian, C. Lu, X. Zhang, K. C. Tan, and Y. Jin, Solving large-scale
+% Y. Tian, C. Lu, X. Zhang, K. C. Tan, and Y. Jin. Solving large-scale
 % multi-objective optimization problems with sparse optimal solutions via
-% unsupervised neural networks, IEEE Transactions on Cybernetics, 2021,
+% unsupervised neural networks. IEEE Transactions on Cybernetics, 2021,
 % 51(6): 3115-3128.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB Platform

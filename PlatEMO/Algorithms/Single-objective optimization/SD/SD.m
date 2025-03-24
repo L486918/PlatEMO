@@ -1,14 +1,14 @@
 classdef SD < ALGORITHM
-% <single> <real> <large/none>
+% <1997> <single> <real> <large/none>
 % Steepest descent
 % beta  --- 0.6 --- A parameter within [0,1] for line search
 % sigma --- 0.4 --- A parameter within [0 0.5] for line search
 
 %------------------------------- Reference --------------------------------
-% S. S. Petrova and A. D. Solov'ev, The origin of the method of steepest
-% descent, Historia Mathematica, 1997, 24(4): 361-375.
+% S. S. Petrova and A. D. Solov'ev. The origin of the method of steepest
+% descent. Historia Mathematica, 1997, 24(4): 361-375.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

@@ -1,13 +1,13 @@
 classdef MOMFEAII < ALGORITHM
-% <multi> <real/integer/label/binary/permutation> <constrained/none> <multitask>
+% <2021> <multi> <real/integer/label/binary/permutation> <constrained/none> <multitask>
 % Multi-objective multifactorial evolutionary algorithm II
 
 %------------------------------- Reference --------------------------------
-% K. K. Bali, A. Gupta, Y. Ong, and P. S. Tan, Cognizant multitasking in
-% multiobjective multifactorial evolution: MO-MFEA-II, IEEE Transactions on
+% K. K. Bali, A. Gupta, Y. Ong, and P. S. Tan. Cognizant multitasking in
+% multiobjective multifactorial evolution: MO-MFEA-II. IEEE Transactions on
 % Cybernetics, 2021, 51(4): 1784-1796.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

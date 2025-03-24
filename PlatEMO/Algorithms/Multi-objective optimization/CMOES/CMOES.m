@@ -1,14 +1,14 @@
 classdef CMOES < ALGORITHM
-% <multi> <real/integer/label/binary/permutation> <constrained>
+% <2024> <multi> <real/integer/label/binary/permutation> <constrained>
 % Constrained multi-objective optimization based on even search
 % type --- 1 --- Type of operator (1. GA 2. DE)
 
 %------------------------------- Reference --------------------------------
-% F. Ming, W. Gong, and Y. Jin, Even search in a promising region for
-% constrained multi-objective optimization, IEEE/CAA Journal of Automatica
+% F. Ming, W. Gong, and Y. Jin. Even search in a promising region for
+% constrained multi-objective optimization. IEEE/CAA Journal of Automatica
 % Sinica, 2024, 11(2): 474-486.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

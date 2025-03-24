@@ -1,16 +1,16 @@
 classdef BSPGA < ALGORITHM
-% <single> <binary> <large/none> <constrained/none>
+% <2020> <single> <binary> <large/none> <constrained/none>
 % Binary space partition tree based genetic algorithm
 % proC   ---  0.5 --- Probability of crossover
 % proM   ---    1 --- Expectation of the number of mutated variables
 % lambda --- 0.05 --- Tree based learning probability
 
 %------------------------------- Reference --------------------------------
-% Y. Su, N. Guo, Y. Tian, and X. Zhang, A non-revisiting genetic algorithm
-% based on a novel binary space partition tree, Information Sciences, 2020,
+% Y. Su, N. Guo, Y. Tian, and X. Zhang. A non-revisiting genetic algorithm
+% based on a novel binary space partition tree. Information Sciences, 2020,
 % 512: 661-674.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

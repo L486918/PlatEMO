@@ -1,15 +1,15 @@
 classdef RGA_M2_2 < ALGORITHM
-% <multi> <real> <expensive> <constrained>
+% <2019> <multi> <real> <expensive> <constrained>
 % Real-coded genetic algorithm with framework M2-2
 % wmax --- 20 --- Number of generations before updating surrogate models
 % mu   ---  5 --- Number of real evaluated solutions at each iteration
 
 %------------------------------- Reference --------------------------------
-% K. Deb, R. Hussein, P. C. Roy, and G. Toscano-Pulido, A taxonomy for 
-% metamodeling framework for evolutionary multiobjective optimization, IEEE
+% K. Deb, R. Hussein, P. C. Roy, and G. Toscano-Pulido. A taxonomy for 
+% metamodeling framework for evolutionary multiobjective optimization. IEEE
 % Transactons on Evolutionary Computation, 2019, 23(1): 104-116.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

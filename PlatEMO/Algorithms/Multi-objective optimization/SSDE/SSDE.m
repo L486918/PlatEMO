@@ -1,16 +1,16 @@
 classdef SSDE < ALGORITHM
-% <multi/many> <real/integer> <constrained/none> <expensive>
+% <2024> <multi/many> <real/integer> <constrained/none> <expensive>
 % Self-organized surrogate-assisted differential evolution
 % num_nodes ---     --- Number of neurons in each dimension of the latent space
 % eta0      --- 0.2 --- Initial learning rate
 % sigma0    ---     --- Size of neighborhood mating pools
 
 %------------------------------- Reference --------------------------------
-% A. F. R. Araújo, L. R. C. Farias, and A. R. C. Gonçalves, Self-organizing
-% surrogate-assisted non-dominated sorting differential evolution, Swarm
-% and Evolutionary Computation, 2024.
+% A. F. R. Araújo, L. R. C. Farias, and A. R. C. Gonçalves. Self-organizing
+% surrogate-assisted non-dominated sorting differential evolution. Swarm
+% and Evolutionary Computation, 2024, 91: 101703.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

@@ -1,14 +1,14 @@
 classdef MTCMO < ALGORITHM
-% <multi> <real/integer/label/binary/permutation> <constrained>
+% <2023> <multi> <real/integer/label/binary/permutation> <constrained>
 % Multitasking constrained multi-objective optimization
 
 %------------------------------- Reference --------------------------------
-% K. Qiao, K. Yu, B. Qu, J. Liang, H. Song, C. Yue, H. Lin, and K. C. Tan,
+% K. Qiao, K. Yu, B. Qu, J. Liang, H. Song, C. Yue, H. Lin, and K. C. Tan.
 % Dynamic auxiliary task-based evolutionary multitasking for constrained
-% multi-objective optimization, IEEE Transactions on Evolutionary
+% multi-objective optimization. IEEE Transactions on Evolutionary
 % Computation, 2023, 27(3): 642-656.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

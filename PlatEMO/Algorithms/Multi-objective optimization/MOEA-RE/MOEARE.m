@@ -1,14 +1,14 @@
 classdef MOEARE < ALGORITHM  
-% <multi> <real/integer/label/binary/permutation> <robust>
+% <2020> <multi> <real/integer/label/binary/permutation> <robust>
 % Multi-objective evolutionary algorithm with robustness enhancement
 % alpha --- 1.5 --- Parameter for deleting solutions from archive
 
 %------------------------------- Reference --------------------------------
-% Z. He, G. G. Yen, and J. Lv, Evolutionary multiobjective optimization
-% with robustness enhancement, IEEE Transactions on Evolutionary
+% Z. He, G. G. Yen, and J. Lv. Evolutionary multiobjective optimization
+% with robustness enhancement. IEEE Transactions on Evolutionary
 % Computation, 2020, 24(3): 494-507.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

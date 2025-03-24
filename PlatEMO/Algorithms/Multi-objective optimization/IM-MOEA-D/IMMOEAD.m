@@ -1,16 +1,15 @@
 classdef IMMOEAD < ALGORITHM
-% <multi> <real/integer> <large/none>
-% Inverse modeling multiobjective evolutionary algorithm based on
-% decomposition
+% <2021> <multi> <real/integer> <large/none>
+% Inverse modeling MOEA/D
 % K --- 10 --- Number of reference vectors
 
 %------------------------------- Reference --------------------------------
-% L. R. C. Farias and A. F. R. Araujo, IM-MOEA/D: An inverse modeling
-% multi-objective evolutionary algorithm based on decomposition,
+% L. R. C. Farias and A. F. R. Araujo. IM-MOEA/D: An inverse modeling
+% multi-objective evolutionary algorithm based on decomposition.
 % Proceedings of the IEEE International Conference on Systems, Mans and
 % Cybernetics, 2021.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

@@ -1,14 +1,14 @@
 classdef TSP < PROBLEM
-% <single> <permutation> <large/none>
+% <2007> <single> <permutation> <large/none>
 % The traveling salesman problem
 
 %------------------------------- Reference --------------------------------
-% D. Corne and J. Knowles, Techniques for highly multiobjective
-% optimisation: some nondominated points are better than others,
+% D. Corne and J. Knowles. Techniques for highly multiobjective
+% optimisation: some nondominated points are better than others.
 % Proceedings of the Annual Conference on Genetic and Evolutionary
 % Computation, 2007, 773-780.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -41,6 +41,9 @@ classdef TSP < PROBLEM
         end
         %% Calculate objective values
         function PopObj = CalObj(obj,PopDec)
+            [sorted,rank] = sort(PopDec,2);
+            index = any(sorted~=repmat(1:size(PopDec,2),size(PopDec,1),1),2);
+            PopDec(index,:) = rank(index,:);
             PopObj = zeros(size(PopDec,1),1);
             for i = 1 : size(PopDec,1)
                 for j = 1 : size(PopDec,2)-1
@@ -52,7 +55,12 @@ classdef TSP < PROBLEM
         %% Display a population in the decision space
         function DrawDec(obj,Population)
             [~,best] = min(Population.objs);
-            Draw(obj.R(Population(best).dec([1:end,1]),:),'-k','LineWidth',1.5);
+            if any(~ismember(1:length(Population(best).dec),Population(best).dec))
+                [~,Dec] = sort(Population(best).dec);
+            else
+                Dec = Population(best).dec;
+            end
+            Draw(obj.R(Dec([1:end,1]),:),'-k','LineWidth',1.5);
             Draw(obj.R);
         end
     end

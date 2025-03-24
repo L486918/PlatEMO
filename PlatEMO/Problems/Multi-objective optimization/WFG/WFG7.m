@@ -1,14 +1,14 @@
 classdef WFG7 < PROBLEM
-% <multi/many> <real> <large/none> <expensive/none>
+% <2006> <multi/many> <real> <large/none> <expensive/none>
 % Benchmark MOP proposed by Walking Fish Group
 % K --- --- The position parameter, which should be a multiple of M-1
 
 %------------------------------- Reference --------------------------------
-% S. Huband, P. Hingston, L. Barone, and L. While, A review of
-% multiobjective test problems and a scalable test problem toolkit, IEEE
+% S. Huband, P. Hingston, L. Barone, and L. While. A review of
+% multiobjective test problems and a scalable test problem toolkit. IEEE
 % Transactions on Evolutionary Computation, 2006, 10(5): 477-506.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

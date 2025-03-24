@@ -1,16 +1,16 @@
 classdef MOMBIII < ALGORITHM
-% <multi/many> <real/integer/label/binary/permutation>
+% <2015> <multi/many> <real/integer/label/binary/permutation>
 % Many objective metaheuristic based on the R2 indicator II
 % alpha   ---   0.5 --- Threshold of variances
 % epsilon --- 0.001 --- Tolerance threshold
 % record  ---     5 --- The record size of nadir vectors
 
 %------------------------------- Reference --------------------------------
-% R. Hernandez Gomez and C. A. Coello Coello, Improved metaheuristic based
-% on the R2 indicator for many-objective optimization, Proceedings of the
+% R. Hernandez Gomez and C. A. Coello Coello. Improved metaheuristic based
+% on the R2 indicator for many-objective optimization. Proceedings of the
 % Annual Conference on Genetic and Evolutionary Computation, 2015, 679-686.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform

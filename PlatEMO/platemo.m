@@ -44,7 +44,7 @@ function varargout = platemo(varargin)
 %
 %   runs PSO with a population size of 100 on SOP_F1 for 3 seconds.
 %
-%       platemo('algorithm',{@KnEA,0.4},'problem',{@WFG4,6},'M',5)
+%       platemo('algorithm',{@KnEA,0.4},'problem',{@WFG4,16},'M',5)
 %
 %   runs KnEA on 5-objective WFG4 and sets the parameters in KnEA and WFG4.
 %
@@ -66,7 +66,7 @@ function varargout = platemo(varargin)
 %   violations are all calculated by a single function Evaluation().
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2024 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
