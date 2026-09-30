@@ -1,9 +1,9 @@
-function PopDec = EvolEI(Problem,Dec,Obj,model,IFEs)
+function OffDec = EvolEI(Problem,Dec,Obj,model,IFEs)
 % Solution update in EGO, where a solution with the best expected
 % improvement is re-evaluated
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2026 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -16,7 +16,6 @@ function PopDec = EvolEI(Problem,Dec,Obj,model,IFEs)
     EI    = zeros(N,1);
     Gbest = min(Obj);
     E0    = inf;
-    
     while IFEs > 0
         drawnow('limitrate');
         for i = 1 : N
@@ -33,5 +32,5 @@ function PopDec = EvolEI(Problem,Dec,Obj,model,IFEs)
         Off    = [OperatorGA(Problem,Parent(TournamentSelection(2,size(Parent,1),EI(index(1:ceil(N/2)))),:));OperatorGA(Problem,Parent,{0,0,1,20})];
         IFEs   = IFEs - size(Off,1);
     end
-    PopDec = Best;
+    OffDec = Best;
 end

@@ -2,7 +2,7 @@ classdef module_cre < handle
 %module_cre - Creation module.
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2026 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -89,7 +89,7 @@ classdef module_cre < handle
             GUI.APP(2,[5 6],uilabel(obj.app.grid(4),'Text','Parallelization','Tooltip','Perform the training with multiple CPUs'));
             obj.app.checkD     = GUI.APP(2,7,uicheckbox(obj.app.grid(4),'Text','','Tooltip','Perform the training with multiple CPUs','Enable',~isempty(ver('parallel'))));
             GUI.APP(3,1,uilabel(obj.app.grid(4),'Text','File path','Tooltip','The population will be automatically loaded from file before training and saved to file after each iteration'));
-            obj.app.editD(4)   = GUI.APP(3,[3 7],uieditfield(obj.app.grid(4),'Value',fullfile(cd,'Algorithms','Blocks','myAlgorithm.mat'),'Tooltip','The population will be automatically loaded from file before training and saved to file after each iteration'));
+            obj.app.editD(4)   = GUI.APP(3,[3 7],uieditfield(obj.app.grid(4),'Value',fullfile(cd,'Algorithms','NeuroEA','myAlgorithm.mat'),'Tooltip','The population will be automatically loaded from file before training and saved to file after each iteration'));
             obj.app.buttonD(1) = GUI.APP(3,2,uibutton(obj.app.grid(4),'Text','...','BackgroundColor','w','ButtonpushedFcn',{@obj.cb_filepath,obj.app.editD(4)},'Tooltip','The population will be automatically loaded from file before training and saved to file after each iteration'));
             obj.app.axesD      = GUI.APP(4,[1 7],uiaxes(obj.app.grid(4),'BackgroundColor','w','Box','on','FontName','Times New Roman','FontSize',11));
             axtoolbar(obj.app.axesD);
@@ -120,7 +120,7 @@ classdef module_cre < handle
             
             % Read block list
             obj.blockList = {};
-            Folders = split(genpath(fullfile(fileparts(mfilename('fullpath')),'..','Algorithms','Blocks')),pathsep);
+            Folders = split(genpath(fullfile(fileparts(mfilename('fullpath')),'..','Algorithms','NeuroEA')),pathsep);
             for i = 1 : length(Folders) - 1
                 Files = what(Folders{i});
                 Files = Files.m;
@@ -528,11 +528,11 @@ classdef module_cre < handle
                     % Save the source code
                     try
                         [~,name] = fileparts(Name);
-                        Code = {['classdef ',name,' < GEA % < ALGORITHM']
+                        Code = {['classdef ',name,' < NeuroEA % < ALGORITHM']
                                ''
                                '    methods'
                                ['        function obj = ',name,'(varargin)']
-                               '            obj    = obj@GEA(varargin{:});'};
+                               '            obj    = obj@NeuroEA(varargin{:});'};
                         for i = 1 : numnodes(obj.Graph)
                             Parameter = obj.blockList{ismember(obj.blockList(:,1),class(obj.Graph.Nodes.block(i))),3};
                             paras     = cell(1,size(Parameter,1));
@@ -595,7 +595,7 @@ classdef module_cre < handle
                 Blocks = obj.Graph.Nodes.block;
                 Graph  = adjacency(obj.Graph,'weighted');
                 Blocks.Validity(Graph);
-                ALG = GEA('parameter',{Blocks,Graph},'outputFcn',@(~,~)[]);
+                ALG = NeuroEA('parameter',{Blocks,Graph},'outputFcn',@(~,~)[]);
                 % Generate the PROBLEM object
                 [name,para] = GUI.GetParameterSetting(obj.app.listD.items(1));
                 PRO = feval(name,'N',para{1},'M',para{2},'D',para{3},'maxFE',para{1}+1,'parameter',para(5:end));
@@ -699,7 +699,7 @@ classdef module_cre < handle
                     Blocks = obj.Graph.Nodes.block;
                     Graph  = adjacency(obj.Graph,'weighted');
                     Blocks.Validity(Graph);
-                    ALG = GEA('parameter',{Blocks,Graph},'outputFcn',@obj.outputFcnTest,'save',1);
+                    ALG = NeuroEA('parameter',{Blocks,Graph},'outputFcn',@obj.outputFcnTest,'save',1);
                 catch err
                     err = addCause(err,MException('','The algorithm is invalid'));
                     uialert(obj.GUI.app.figure,sprintf('%s, since %s',err.cause{end}.message,err.message),'Invalid algorithm');
@@ -779,7 +779,7 @@ classdef module_cre < handle
                     Blocks = obj.Graph.Nodes.block;
                     Graph  = adjacency(obj.Graph,'weighted');
                     Blocks.Validity(Graph);
-                    obj.data{1} = GEA('parameter',{Blocks,Graph},'outputFcn',@(~,~)[],'save',1);
+                    obj.data{1} = NeuroEA('parameter',{Blocks,Graph},'outputFcn',@(~,~)[],'save',1);
                 catch err
                     err = addCause(err,MException('','The algorithm is invalid'));
                     uialert(obj.GUI.app.figure,sprintf('%s, since %s',err.cause{end}.message,err.message),'Invalid algorithm');
@@ -890,7 +890,7 @@ classdef module_cre < handle
             if exist(obj.app.editD(4).Value,'file')
                 try
                     load(obj.app.editD(4).Value,'-mat','Population');
-                    PopDec = Population.decs;
+                    PopDec = Population(1:ceil(end/2)).decs;
                 catch
                     error(['Fail to load the variable Population from ',obj.app.editD(4).Value]);
                 end

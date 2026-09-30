@@ -1,3 +1,25 @@
+# Release Highlights of PlatEMO 4.16 (2026-07)
+* Add a large-scale multi-objective evolutionary algorithm FDSEA, add two constrained multi-objective evolutionary algorithms CMOCEA-DDAP and CPCMO, add five expensive constrained multi-objective evolutionary algorithms CKAnD, KAnD, MaO-TSPP, MOEA/D-EGO-CEI, and TSPP. There are currently 360 algorithms in the platform.
+
+* Add five multimodal multiobjective benchmark problems HYL1-HYL5. There are currently 630 problems in the platform.
+
+# Release Highlights of PlatEMO 4.15 (2026-05)
+* Add a many-objective evolutionary algorithm MaOEA-HAP, add a sparse multi-objective evolutionary algorithm SparseEMT, add two multimodal multi-objective evolutionary algorithms MMEA-ARM and MMOEABH, add two expensive multi-objective evolutionary algorithms CI-EMO and EGES, add four constrained multi-objective evolutionary algorithms CMOEA-2S, CMOEA-AOP, ILCMO, and PRCEA, and add two large-scale multi-objective evolutionary algorithms GDVTSF and MOEA-IB. There are currently 352 algorithms in the platform.
+
+# Release Highlights of PlatEMO 4.14 (2026-01)
+* A detailed tutorial of using NeuroEAs is added to the user manual.
+
+* Add an expensive single-objective evolutionary algorithm MiSACO, two expensive multi-objective evolutionary algorithms CMOEBOD and SAMOEA-TL2M, a sparse multi-objective evolutionary algorithm AMG-PSL, two constrained multi-objective evolutionary algorithms CMOBR and CMODRL, and a multi-model multi-objective evolutionary algorithm MONAS. There are currently 340 algorithms in the platform.
+
+* Add 30 expensive single-objective optimization problems EOPCCV_F1-EOPCCV_F30. There are currently 625 problems in the platform.
+
+# Release Highlights of PlatEMO 4.13 (2025-07)
+* Add an automated evolutionary algorithm SSIO-RL (it should be trained before used), add a sparse multi-objective evolutionary algorithm KLEA, add five dynamic multi-objective evolutionary algorithms AE-NSGA-II, CGLP, DM-MOEA, KL-NSGA-II, and SVR-NSGA-II, add four expensive multi-objective evolutionary algorithms EM-SAEA, PEA, PEAplus, and TEA. There are currently 333 algorithms in the platform.
+
+* Add 12 dynamic sparse multi-objective optimization problems DSMOP1-DSMOP12. There are currently 595 problems in the platform.
+
+# Release Highlights of PlatEMO 4.12 (2025-04)
+* Add an automated evolutionary algorithm AutoV (it should be trained before used), add five single-objective evolutionary algorithms AESSPSO, DOA, KMA, MGO, and WOA, add a multi-objective evolutionary algorithm GCNMOEA, add an expensive single-objective evolutionary algorithm SADE-AMSS, add three expensive multi-objective evolutionary algorithms DISK, DISKplus, and DRL-SAEA, add a sparse multi-objective evolutionary algorithm AFSEA, add eight constrained multi-objective evolutionary algorithms CMDEIPCM, CSEMT, DBEMTO, DPCPRA, DPVAPS, DSSEA, DVECA, and EMCMMS. There are currently 322 algorithms in the platform.
 
 # Release Highlights of PlatEMO 4.11 (2025-02)
 * Add two multi-objective evolutionary algorithms GWASF-GA and WASF-GA, add three expensive multi-objective evolutionary algorithms NSGAIII-EHVI, PIEA, and PIMD, add two constrained multi-objective evolutionary algorithms APSEA and CMOEA-CD. There are currently 302 algorithms in the platform.

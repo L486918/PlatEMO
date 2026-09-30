@@ -10,7 +10,7 @@ classdef CSEA < ALGORITHM
 % many-objective optimization. IEEE Transactions on Evolutionary
 % Computation, 2019, 23(1): 74-88.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2026 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -41,7 +41,7 @@ classdef CSEA < ALGORITHM
                     sigmoidLayer
                     regressionLayer];
 
-            maxEpochs = 400;
+            maxEpochs = 100;
             miniBatchSize = 32;
             options = trainingOptions('adam', ...
                         'ExecutionEnvironment','auto', ...
@@ -49,7 +49,7 @@ classdef CSEA < ALGORITHM
                         'MiniBatchSize',miniBatchSize, ...
                         'Shuffle','every-epoch', ...
                         'Plots','none', ...
-                        'Verbose',false);%, ... Plots','none'
+                        'Verbose',false);
 
             %% Optimization
             while Algorithm.NotTerminated(Arc)

@@ -8,7 +8,7 @@ classdef EMMOEA < ALGORITHM
 % criterion for expensive multi-/many-objective optimization. IEEE
 % Transactions on Evolutionary Computation, 2023, 27(4): 1085-1099.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2026 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -16,7 +16,7 @@ classdef EMMOEA < ALGORITHM
 % Computational Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
-% This function is written by ShufenQin
+% This function is written by Shufen Qin
 
     methods
         function main(Algorithm,Problem)

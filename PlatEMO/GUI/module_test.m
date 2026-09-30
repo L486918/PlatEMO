@@ -2,7 +2,7 @@ classdef module_test < handle
 %module_test - Test module.
 
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2026 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
@@ -189,7 +189,7 @@ classdef module_test < handle
         %% Show the specified data
         function cb_slider(obj,~,~,ax)
             if ~isempty(obj.app.dropD(1).Items)
-                % Determine the current number of evaluationsnumber of evaluations
+                % Determine the current number of evaluations
                 ALG  = obj.data{obj.app.dropD(1).Value,1};
                 PRO  = obj.data{obj.app.dropD(1).Value,2};
                 rate = PRO.FE/max(PRO.FE,PRO.maxFE);

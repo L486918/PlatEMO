@@ -11,12 +11,13 @@
 Developed by BIMK (Institute of Bioinspired Intelligence and Mining Knowledge) of Anhui University 
 <!-- and NICE (Nature Inspired Computing and Engineering Group) of University of Surrey -->
 <div>
-<img src="https://wx2.sinaimg.cn/mw690/00752cx4ly1gnpnfh0i4yj30m80m83zx.jpg" width=160>
+<!--<img src="https://wx2.sinaimg.cn/mw690/00752cx4ly1gnpnfh0i4yj30m80m83zx.jpg" width=160> -->
 <!-- <img src="https://wx2.sinaimg.cn/mw690/00752cx4ly1gnpnfgz0ulj30px08n74t.jpg" height=140> -->
+<img src="./Doc/ahu-logo.jpg" width="160"> <img src="./Doc/key_Lab.jpg" width="160" style="margin-left: 20px;">
 </div>
 
 * 300+ open source evolutionary algorithms
-* 500+ open source benchmark problems
+* 600+ open source benchmark problems
 * Powerful GUI for performing experiments in parallel
 * Generating results in the format of Excel or LaTeX table by one-click operation
 * State-of-the-art algorithms will be included continuously
@@ -44,12 +45,12 @@ following literature:
 }
 ```
 
-# Release Highlights of PlatEMO 4.11
+# Release Highlights of PlatEMO 4.16
 [Release Note can be found here](./Doc/releasenote.md)
 
-* Add two multi-objective evolutionary algorithms GWASF-GA and WASF-GA, add three expensive multi-objective evolutionary algorithms NSGAIII-EHVI, PIEA, and PIMD, add two constrained multi-objective evolutionary algorithms APSEA and CMOEA-CD. There are currently 302 algorithms in the platform.
+* Add a large-scale multi-objective evolutionary algorithm FDSEA, add two constrained multi-objective evolutionary algorithms CMOCEA-DDAP and CPCMO, add five expensive constrained multi-objective evolutionary algorithms CKAnD, KAnD, MaO-TSPP, MOEA/D-EGO-CEI, and TSPP. There are currently 360 algorithms in the platform.
 
-* Add 24 single-objective optimization problems BBOB_F1-BBOB_F24. There are current 583 problems in the platform.
+* Add five multimodal multiobjective benchmark problems HYL1-HYL5. There are currently 630 problems in the platform.
 
 # Features of PlatEMO
 *  Totally Developed in MATLAB  

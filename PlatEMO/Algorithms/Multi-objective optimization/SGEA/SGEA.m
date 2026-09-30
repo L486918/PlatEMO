@@ -1,4 +1,4 @@
-classdef SGEA<ALGORITHM
+classdef SGEA < ALGORITHM
 % <2017> <multi> <real/integer/label/binary/permutation> <constrained/none> <dynamic>
 % Steady-state and generational evolutionary algorithm
 
@@ -7,7 +7,7 @@ classdef SGEA<ALGORITHM
 % algorithm for dynamic multiobjective optimization. IEEE Transactions on
 % Evolutionary Computation, 2017, 21(1): 65-82.
 %------------------------------- Copyright --------------------------------
-% Copyright (c) 2025 BIMK Group. You are free to use the PlatEMO for
+% Copyright (c) 2026 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
 % in the platform should acknowledge the use of "PlatEMO" and reference "Ye
 % Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
