@@ -31,8 +31,9 @@ classdef va15StructModel_Batch < PROBLEM
         end
         %% Repair infeasible solutions
         function PopDec = CalDec(obj,PopDec)
-            % 恢复基类契约：binary 编码必须取整为 0/1
-            % （覆盖基类 CalDec 时丢失了 round，连续型算子算法如 MMEA-ARM 会带入小数）
+            % 恢复基类完整契约：先截断到[0,1]再取整为 0/1
+            % （EDA/DE 类算子会产出越界连续值，仅 round 会得到 2/-1 等非法值）
+            PopDec = max(min(PopDec,repmat(obj.upper,size(PopDec,1),1)),repmat(obj.lower,size(PopDec,1),1));
             PopDec = round(PopDec);
             N = size(PopDec,1);
             VarNum = sqrt(size(PopDec,2));

@@ -1,5 +1,7 @@
 function CrowdDis = CrowdingDistance(PopObj,FrontNo)
 % Calculate the crowding distance of each solution front by front
+%   FrontNo 缺省时按全部同一前沿处理（与 PlatEMO 全局版行为一致，
+%   避免多算法共享路径时单参数调用报错）
 
 %------------------------------- Copyright --------------------------------
 % Copyright (c) 2018-2019 BIMK Group. You are free to use the PlatEMO for
@@ -10,6 +12,9 @@ function CrowdDis = CrowdingDistance(PopObj,FrontNo)
 % Computational Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
+    if nargin < 2
+        FrontNo = ones(1,size(PopObj,1));   % 单参数调用：全部视为同一前沿
+    end
     [N,M]    = size(PopObj);
     CrowdDis = zeros(1,N);
     % 将FrontNo排序(去重后),也就是说1:MaxFront
