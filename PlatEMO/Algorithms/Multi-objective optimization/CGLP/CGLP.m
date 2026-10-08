@@ -27,7 +27,12 @@ classdef CGLP < ALGORITHM
     methods
         function main(Algorithm, Problem)
             %% Parameter setting
-            [FEinit,taut] = Algorithm.ParameterSet(10000,10);
+            [FEinit,taut,restartFE] = Algorithm.ParameterSet(10000,10,0);
+            % restartFE > 0：静态问题适配模式——每 restartFE 次评价强制唤醒一次
+            %   （静态环境下 Changed 永不触发，周期性唤醒让预测机制参与优化，
+            %    且 RMMEDA 的预算阈值改为递增目标，避免 FE 超过 FEinit 后空转）
+            % restartFE = 0：原始动态模式（Changed 检测环境变化）
+            nextWake  = FEinit;  % 静态模式：初始化完成后立即首次唤醒，之后按 restartFE 递增
             MaxT      = Problem.maxFE/taut;
             hisPareto = cell(MaxT,1);
             hisPopX   = {};
@@ -53,10 +58,20 @@ classdef CGLP < ALGORITHM
             end
 
             %% Optimization
-            while Algorithm.NotTerminated(Population)                    
-                if Changed(Problem,Population)
-                    [Population1,pop_LCM,pop_DCM,tipe] = CGLP_pre(Problem,hisPop,T,hisPareto,Problem.N,tipe); 
-                    Population  = RMMEDA(Algorithm,Problem,Problem.N,FEinit,Population1);   
+            while Algorithm.NotTerminated(Population)
+                if restartFE > 0
+                    doWake = Problem.FE >= nextWake;      % 静态适配：周期性唤醒
+                else
+                    doWake = Changed(Problem,Population); % 原始动态模式：变化检测
+                end
+                if doWake
+                    [Population1,pop_LCM,pop_DCM,tipe] = CGLP_pre(Problem,hisPop,T,hisPareto,Problem.N,tipe);
+                    if restartFE > 0
+                        targetFE = min(Problem.FE+restartFE,Problem.maxFE); % 递增预算目标
+                    else
+                        targetFE = FEinit;                                   % 原始逻辑
+                    end
+                    Population  = RMMEDA(Algorithm,Problem,Problem.N,targetFE,Population1);
                     tipe        = selfadjust(Algorithm.PopX',pop_LCM,pop_DCM,tipe);
                     hisPopX{T}  = Algorithm.PopX';
                     AllPop      = [AllPop,Population];
