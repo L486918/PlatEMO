@@ -106,7 +106,7 @@ classdef MMEAARM < ALGORITHM
                             F = F + GV{i};
                         end
                         for i = 1 : floor(Problem.N/K)
-                            Mask(i,TournamentSelection(2,floor(rand*Problem.D),F)) = 1;
+                            Mask(i,TournamentSelection(2,max(1,floor(rand*Problem.D)),F)) = 1; % 防止锦标赛大小为0
                         end
                         Populations{K} = Problem.Evaluation(Dec.*Mask);
                         Masks{K}       = Mask;

@@ -19,7 +19,7 @@ function [OffDec,OffMask] = Operator(Problem,ParentDec,ParentMask,Fitness)
     
     %% Clustering
     [~, index] = sort(Fitness);
-    GroupSize  = ceil(mean(ParentMask,'all')*Problem.D);
+    GroupSize  = max(1,ceil(mean(ParentMask,'all')*Problem.D)); % 防止全0 Mask 导致 while 死循环
     VaryGroup  = ones(1,Problem.D);
     start      = 1;
     GroupI     = 1;
