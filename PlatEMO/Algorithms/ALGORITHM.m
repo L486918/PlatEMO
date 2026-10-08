@@ -98,7 +98,7 @@ classdef ALGORITHM < handle & matlab.mixin.Heterogeneous
         end
     end
     methods(Access = protected, Sealed)
-        function nofinish = NotTerminated(obj,Population)
+        function nofinish = NotTerminated(obj,Population,Offspring,inFeasible,SubGraphPool)
         %NotTerminated - The function called after each generation of the
         %execution.
         %
@@ -106,6 +106,10 @@ classdef ALGORITHM < handle & matlab.mixin.Heterogeneous
         %   the current execution, and returns true if the algorithm should
         %   be terminated, i.e., the number of function evaluations or
         %   runtime exceeds.
+        %
+        %   The optional arguments Offspring, inFeasible and SubGraphPool
+        %   are stored in obj.result together with the population, so that
+        %   algorithms (e.g. MSDSSHA) can keep per-generation records.
         %
         %   obj.outputFcn is called here, whose runtime will not be counted
         %   in the runtime of current execution.
@@ -115,13 +119,24 @@ classdef ALGORITHM < handle & matlab.mixin.Heterogeneous
         %           ... ...
         %       end
         
+            if nargin < 3 || isempty(Offspring)
+                Offspring = [];
+            end
+            if nargin < 4 || isempty(inFeasible)
+                % 缺省统计：不可行解带大数惩罚(PEN=1e6)，可行解目标值量级远
+                % 小于 1e5，按阈值统计当前种群中的不可行解数
+                inFeasible = sum(any(Population.objs >= 1e5,2));
+            end
+            if nargin < 5 || isempty(SubGraphPool)
+                SubGraphPool = struct();
+            end
             obj.metric.runtime = obj.metric.runtime + toc(obj.starttime);
             if obj.pro.maxRuntime < inf
                 obj.pro.maxFE = obj.pro.FE*obj.pro.maxRuntime/obj.metric.runtime;
             end
             num   = max(1,abs(obj.save));
             index = max(1,min(min(num,size(obj.result,1)+1),ceil(num*obj.pro.FE/obj.pro.maxFE)));
-            obj.result(index,:) = {obj.pro.FE,Population};
+            obj.result(index,:) = {obj.pro.FE,Population,Offspring,inFeasible,SubGraphPool};
             drawnow('limitrate');
             obj.outputFcn(obj,obj.pro);
             nofinish = obj.pro.FE < obj.pro.maxFE;
@@ -168,7 +183,7 @@ function DefaultOutput(Algorithm,Problem)
             if isempty(Algorithm.metName)
                 if Problem.M == 1
                     Algorithm.metName = {'Min_value','Feasible_rate'};
-                elseif length(Algorithm.result{end}) >= size(Problem.optimum,1)
+                elseif length(Algorithm.result{end,2}) >= size(Problem.optimum,1)
                     Algorithm.metName = {'HV','Feasible_rate'};
                 else
                     Algorithm.metName = {'IGD','HV','GD','Feasible_rate'};
@@ -179,15 +194,15 @@ function DefaultOutput(Algorithm,Problem)
             title(sprintf('%s on %s',class(Algorithm),class(Problem)),'Interpreter','none');
             top = uimenu(gcf,'Label','Data source');
             if Problem.M > 1
-                uimenu(top,'Label','Population (obj.)','CallBack',{@(h,~,Pro,P)eval('Draw(gca);Pro.DrawObj(P);cb_menu(h);'),Problem,Algorithm.result{end}});
+                uimenu(top,'Label','Population (obj.)','CallBack',{@(h,~,Pro,P)eval('Draw(gca);Pro.DrawObj(P);cb_menu(h);'),Problem,Algorithm.result{end,2}});
             end
-            uimenu(top,'Label','Population (dec.)','CallBack',{@(h,~,Pro,P)eval('Draw(gca);Pro.DrawDec(P);cb_menu(h);'),Problem,Algorithm.result{end}});
+            uimenu(top,'Label','Population (dec.)','CallBack',{@(h,~,Pro,P)eval('Draw(gca);Pro.DrawDec(P);cb_menu(h);'),Problem,Algorithm.result{end,2}});
             if Problem.M > 1
                 uimenu(top,'Label','True Pareto front','CallBack',{@(h,~,P)eval('Draw(gca);Draw(P,{''\it f\rm_1'',''\it f\rm_2'',''\it f\rm_3''});cb_menu(h);'),Problem.optimum});
             end
             cellfun(@(s)uimenu(top,'Label',s,'CallBack',{@(h,~,A)eval('Draw(gca);Draw([cell2mat(A.result(:,1)),A.CalMetric(h.Label)],''-k.'',''LineWidth'',1.5,''MarkerSize'',10,{''Number of function evaluations'',strrep(h.Label,''_'','' ''),[]});cb_menu(h);'),Algorithm}),Algorithm.metName);
             set(top.Children(length(Algorithm.metName)),'Separator','on');
-            top.Children(end).Callback{1}(top.Children(end),[],Problem,Algorithm.result{end});
+            top.Children(end).Callback{1}(top.Children(end),[],Problem,Algorithm.result{end,2});
         elseif Algorithm.save > 0
             for i = 1 : length(Algorithm.metName)
                 Algorithm.CalMetric(Algorithm.metName{i});

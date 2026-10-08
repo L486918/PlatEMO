@@ -102,7 +102,7 @@ function varargout = platemo(varargin)
             end
             Algorithm.Solve(Problem);
             if nargout > 0
-                P = Algorithm.result{end};
+                P = Algorithm.result{end,2};
                 varargout = {P.decs,P.objs,P.cons};
             end
         end

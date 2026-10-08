@@ -105,8 +105,8 @@ classdef module_cre < handle
             obj.app.buttonE(2) = GUI.APP(2,5,uibutton(obj.app.grid(5),'push','Text','Stop','Enable',false,'ButtonpushedFcn',@(~,~)set(obj.app.buttonE(1:2),{'Enable','Text'},{true,'Start';false,'Stop'})));
             obj.app.labelE     = GUI.APP(2,[1 2],uilabel(obj.app.grid(5),'Text','0.00%','WordWrap',true));
             obj.app.menuE      = uicontext(obj.GUI.app.figure,120);
-            obj.app.menuE.add('  Save best solutions','',@(~,~)GUI.SavePopulation(obj.GUI.app.figure,obj.data{1}.result{end},1));
-            obj.app.menuE.add('  Save all solutions','',@(~,~)GUI.SavePopulation(obj.GUI.app.figure,obj.data{1}.result{end},2));
+            obj.app.menuE.add('  Save best solutions','',@(~,~)GUI.SavePopulation(obj.GUI.app.figure,obj.data{1}.result{end,2},1));
+            obj.app.menuE.add('  Save all solutions','',@(~,~)GUI.SavePopulation(obj.GUI.app.figure,obj.data{1}.result{end,2},2));
             obj.app.menuE.flush();
             obj.app.buttonE(3) = GUI.APP(2,7,uibutton(obj.app.grid(5),'push','Text','Save','Enable',false,'ButtonpushedFcn',@(~,~)obj.app.menuE.show()));
             
@@ -748,16 +748,16 @@ classdef module_cre < handle
             else
                 if nargin < 4
                     if obj.data{2}.M == 1
-                        metValue = obj.data{2}.CalMetric('Min_value',obj.data{1}.result{end});
+                        metValue = obj.data{2}.CalMetric('Min_value',obj.data{1}.result{end,2});
                     else
-                        metValue = obj.data{2}.CalMetric('HV',obj.data{1}.result{end});
+                        metValue = obj.data{2}.CalMetric('HV',obj.data{1}.result{end,2});
                     end
                 end
                 Draw(obj.app.axesE);
                 if obj.data{2}.M == 1
-                    obj.data{2}.DrawDec(obj.data{1}.result{end});
+                    obj.data{2}.DrawDec(obj.data{1}.result{end,2});
                 else
-                    obj.data{2}.DrawObj(obj.data{1}.result{end});
+                    obj.data{2}.DrawObj(obj.data{1}.result{end,2});
                 end
                 obj.app.axesE.FontSize = 11;
                 if obj.data{2}.M == 1
@@ -833,9 +833,9 @@ classdef module_cre < handle
                 obj.dataTrain = {};
             else
                 if obj.data{2}.M == 1
-                    obj.app.labelD.Text = sprintf('Min value: %.2e',min(obj.dataTrain{1}.result{end}.objs));
+                    obj.app.labelD.Text = sprintf('Min value: %.2e',min(obj.dataTrain{1}.result{end,2}.objs));
                 else
-                    obj.app.labelD.Text = sprintf('HV: %.2e',-min(obj.dataTrain{1}.result{end}.objs));
+                    obj.app.labelD.Text = sprintf('HV: %.2e',-min(obj.dataTrain{1}.result{end,2}.objs));
                 end
             end
         end
@@ -869,7 +869,7 @@ classdef module_cre < handle
             end
             % Save the results
             try
-                Population = Algorithm.result{end};
+                Population = Algorithm.result{end,2};
                 [~,best]   = min(Population.objs);
                 obj.Graph.Nodes.block.ParameterSet(Population(best).dec);
                 Blocks = obj.Graph.Nodes.block';
@@ -914,10 +914,10 @@ classdef module_cre < handle
                         assert(strcmp(obj.app.buttonD(3).Enable,'on'),'PlatEMO:Termination','');
                         obj.data{1}.Solve(obj.data{2});
                         if obj.data{2}.M == 1
-                            PopObj(i,j) = obj.data{2}.CalMetric('Min_value',obj.data{1}.result{end});
+                            PopObj(i,j) = obj.data{2}.CalMetric('Min_value',obj.data{1}.result{end,2});
                             obj.cb_stoptest([],[],PopObj(i,j));
                         else
-                            PopObj(i,j) = -obj.data{2}.CalMetric('HV',obj.data{1}.result{end});
+                            PopObj(i,j) = -obj.data{2}.CalMetric('HV',obj.data{1}.result{end,2});
                             obj.cb_stoptest([],[],-PopObj(i,j));
                         end
                         if strcmp(obj.app.buttonD(2).Text,'Continue')
@@ -944,10 +944,10 @@ classdef module_cre < handle
                         obj.data{1} = ALG;
                         [i,j]       = ind2sub(size(PopObj),r);
                         if obj.data{2}.M == 1
-                            PopObj(i,j) = obj.data{2}.CalMetric('Min_value',obj.data{1}.result{end});
+                            PopObj(i,j) = obj.data{2}.CalMetric('Min_value',obj.data{1}.result{end,2});
                             obj.cb_stoptest([],[],PopObj(i,j));
                         else
-                            PopObj(i,j) = -obj.data{2}.CalMetric('HV',obj.data{1}.result{end});
+                            PopObj(i,j) = -obj.data{2}.CalMetric('HV',obj.data{1}.result{end,2});
                             obj.cb_stoptest([],[],-PopObj(i,j));
                         end
                     end

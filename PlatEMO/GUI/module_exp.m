@@ -525,9 +525,9 @@ classdef module_exp < handle
                         if ~isempty(valid)
                             [~,rank] = sort(obj.GetMetricValue(r+loc(1)-1,c+loc(2)-1,metric,false));
                             if type == 1
-                                obj.data.PRO(r+loc(1)-1).DrawObj(obj.data.result{r+loc(1)-1,c+loc(2)-1,valid(rank(ceil(end/2)))}{end});
+                                obj.data.PRO(r+loc(1)-1).DrawObj(obj.data.result{r+loc(1)-1,c+loc(2)-1,valid(rank(ceil(end/2)))}{end,2});
                             elseif type == 2
-                                obj.data.PRO(r+loc(1)-1).DrawDec(obj.data.result{r+loc(1)-1,c+loc(2)-1,valid(rank(ceil(end/2)))}{end});
+                                obj.data.PRO(r+loc(1)-1).DrawDec(obj.data.result{r+loc(1)-1,c+loc(2)-1,valid(rank(ceil(end/2)))}{end,2});
                             end
                         end
                         set(ax,'FontSize',8);

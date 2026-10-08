@@ -81,7 +81,7 @@ function Population = parallelFcn(Problem,Dec)
 
     Algorithm = AutoV('parameter',{reshape(Dec,[],4)},'outputFcn',@(~,~)[]);
     Algorithm.Solve(Problem);
-    Population = Algorithm.result{end};
+    Population = Algorithm.result{end,2};
 end
 
 function PopDec = trainInit(N,data)
@@ -103,7 +103,7 @@ end
 function trainOutputFcn(ALG,PRO)
 % Output function for training
 
-    Population = ALG.result{end};
+    Population = ALG.result{end,2};
     clc; fprintf('Training on %s for %d/%d evaluations, %.1fs passed, the best value is %.4e\n',class(PRO.data{1}),PRO.FE,PRO.maxFE,ALG.metric.runtime,min(Population.objs));
     save(PRO.data{2},'Population');
 end
